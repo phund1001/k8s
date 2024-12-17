@@ -8,7 +8,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aminier
+      app: adminer
   template:
     metadata:
       labels:
