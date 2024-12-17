@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dpl-nginx
+  name: mariadb-dpl
   labels:
-    app: nginx
+    app: mariadb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: mariadb
   template:
     metadata:
       labels:
-        app: nginx
+        app: mariadb
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: mariadb
+        image: mariadb
         ports:
-        - containerPort: 80
+        - containerPort: 3306
